@@ -26,6 +26,29 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+@keyframes wiggle {
+  0% { transform: rotate(-2deg); }
+ 25% { transform: rotate(-15deg); }
+ 75% { transform: rotate(15deg); }
+100% { transform: rotate(2deg); }
+}
+
+.wiggly {
+  color: plum;
+  border:10px solid white;
+  border-radius:10px;
+  position:absolute;
+  display: inline-block;
+  animation: wiggle 0.75s infinite;
+}
+
+/* .wiggly{
+  color: plum;
+  border:10px solid white;
+  border-radius:10px;
+  position:absolute;
+} */
 /* .canvas {
   width: 100%;
   height: 100%;
