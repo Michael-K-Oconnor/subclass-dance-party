@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color: aqua;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,7 +21,13 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  color: plum;
+  border:10px solid darkblue;
   border-radius:10px;
   position:absolute;
 }
+/* .canvas {
+  width: 100%;
+  height: 100%;
+  background-color:  plum
+} */
