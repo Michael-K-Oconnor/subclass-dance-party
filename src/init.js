@@ -22,13 +22,23 @@ $(document).ready(function () {
 
     // make a dancer with a random position
 
+    var timeBetweenSteps = Math.max(Math.random() * 1200, 500)
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      timeBetweenSteps
     );
-
+    window.dancers.push(dancer)
     $('body').append(dancer.$node);
   });
+
+  $('.lineUpButton').on('click', function (event) {
+    for (let i = 0; i < window.dancers.length; i++) {
+      let currDancer = window.dancers[i];
+      currDancer.$node.animate({ left: '30px' });
+    }
+
+  });
+
 });
 

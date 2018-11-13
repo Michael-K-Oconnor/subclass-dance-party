@@ -1,5 +1,7 @@
 var BlinkyDancer = function (top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<img class="dancer" src="src/hunter.gif" </img>');
+  this.setPosition(top, left);
 };
 
 
