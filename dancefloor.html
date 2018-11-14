@@ -45,16 +45,57 @@
   [
     "indianred", "coral", "orange", "springgreen",
     "royalblue", "slateblue", "darkslateblue", "indianred", 
-    "coral", "orange", "springgreen", "royalblue", "slateblue"
+    "coral", "orange", "springgreen", "royalblue", "slateblue", 
+    "darkslateblue", "indianred", "coral", "orange", 
+    "springgreen", "royalblue", "slateblue"
   ];
   
-  for (let i = 0; i < 12; i++) {
-    for (let j = 0; j < 12; j++) {
+  for (let i = 0; i < 100; i++) {
+    for (let j = 0; j < 100; j++) {
       ctx.fillStyle = colors[i + j % colors.length];
       ctx.fillRect(i * 205, j * 205, 200, 200);
     }
 
   }
+
+  let colors2 = 
+  [
+    "coral", "orange", "springgreen",
+    "royalblue", "slateblue", "darkslateblue", "indianred", 
+    "coral", "orange", "springgreen", "royalblue", "slateblue", 
+    "darkslateblue", "indianred", "coral", "orange", 
+    "springgreen", "royalblue", "slateblue"
+  ];
+  
+  
+  // for (let i = 0; i < 100; i++) {
+  //   for (let j = 0; j < 100; j++) {
+  //     ctx.fillStyle = colors2[i + j % colors.length];
+  //     ctx.fillRect(i * 205, j * 205, 200, 200);
+
+  //   }
+  // }
+
+  let ai = 0;
+  let aj = 0;
+  let count = 0;
+  
+  window.setInterval(function() {
+    console.log("hello")
+    for (var i = 0; i < 100; i++) {
+      for (var j = 0; j < 100; j++) {
+        ctx.fillStyle = colors2[(i + j + count) % colors2.length];
+        ctx.fillRect(i * 205, j * 205, 200, 200);
+        
+      }
+    }
+    let calc = ((i+j+count) % colors2.length)
+    console.log(calc)
+    count++;
+  }, 500)
+
+
+   
 
 
 
