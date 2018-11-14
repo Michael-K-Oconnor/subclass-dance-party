@@ -26,7 +26,7 @@ body, a:link, a:visited, a:active{
 #blinky:hover {
   opacity: 1;
 }
-#lineUp:hover {
+.lineUpButton:hover {
   opacity: 1;
 }
 #wiggle {

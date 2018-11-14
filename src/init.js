@@ -40,5 +40,13 @@ $(document).ready(function () {
 
   });
 
+  $('#backToDanceFloorButton').on('click', function (event) {
+    for (let i = 0; i < window.dancers.length; i++) {
+      let currDancer = window.dancers[i];
+      currDancer.$node.animate({ left: currDancer.origLeft });
+    }
+
+  });
+
 });
 
