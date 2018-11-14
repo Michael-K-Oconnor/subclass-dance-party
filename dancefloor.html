@@ -13,13 +13,20 @@
 
 <body>
   <div class="topbar">
-    <span class="title">object dance party</span>
-    <button href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</button>
-    <button href="#" class="addDancerButton" data-dancer-maker-function-name="WigglyDancer">add a wiggly dancer</button>
-    <button href="#" class="addDancerButton" data-dancer-maker-function-name="BouncyDancer">add a bouncy dancer</button>
-    <button href="#" class="lineUpButton">LineUp</button>
+    <span class="title"></span>
+    <button href="#" id="blinky" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">
+      <strong>Blinky dancer</strong>
+    </button>
+    <button href="#" id="wiggle" class="addDancerButton" data-dancer-maker-function-name="WigglyDancer">
+      <strong>Wiggly dancer</strong>
+    </button>
+    <button href="#" id="bouncy" class="addDancerButton" data-dancer-maker-function-name="BouncyDancer">
+      <strong>Bouncy dancer</strong>
+    </button>
+    <button href="#" id="lineUp" class="lineUpButton"><strong>Line Up</strong></button>
   </div>
   <canvas id="canvas" height="100%" width="100%"></canvas>
+
   <!-- <canvas class="canvas2" height="200" width="200"></canvas>
   <canvas class="canvas3" height="200" width="200"></canvas>
   <canvas class="canvas4" height="200" width="200"></canvas> -->
@@ -27,30 +34,20 @@
 </body>
 <script>
 
+  // BACKGROUND COLOR
+  // CANVAS
   var canv = document.getElementById("canvas");
   var ctx = canv.getContext("2d");
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-  // ctx.fillStyle = "red";
-  // ctx.fillRect(0, 0, 200, 200);
-  // ctx.strokeStyle = "orange";
-  // ctx.strokeRect(0, 0, 200, 200);
-  // ctx.fillStyle = "blue"
-  // ctx.fillRect(200, 0, 200, 200);
-  // ctx.fillStyle = "green"
-  // ctx.fillRect(400, 0, 200, 200);
-  // ctx.fillStyle = "orange"
-  // ctx.fillRect(600, 0, 200, 200);
-  // ctx.fillStyle = "orange"
-  // ctx.fillRect(0, 200, 200, 200);
-  // ctx.fillStyle = "green"
-  // ctx.fillRect(200, 200, 200, 200);
-  // ctx.fillStyle = "blue"
-  // ctx.fillRect(400, 200, 200, 200);
-  // ctx.fillStyle = "red"
-  // ctx.fillRect(600, 200, 200, 200);
 
-  let colors = ["gold", "red", "slateblue", "lime", "fuchsia", "blue", "orange", "royalblue", "seagreen", "lightcoral", "green", "pink", "aqua "];
+  let colors = 
+  [
+    "indianred", "coral", "orange", "springgreen",
+    "royalblue", "slateblue", "darkslateblue", "indianred", 
+    "coral", "orange", "springgreen", "royalblue", "slateblue"
+  ];
+  
   for (let i = 0; i < 12; i++) {
     for (let j = 0; j < 12; j++) {
       ctx.fillStyle = colors[i + j % colors.length];
